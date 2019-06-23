@@ -1,0 +1,30 @@
+version: '3'
+services:
+    node: # servidor Node.JS + Express para ofrecer una API REST
+        image: node:latest
+        ports:
+            - 2080:80 # se accederá desde el puerto 1090 al servidor web
+        volumes:
+            - ./node/taquillavirtual-api:/taquillavirtual-api # almacenamos los ficheros Node.js en la carpeta taquillavirtual-api
+        working_dir: '/taquillavirtual-api'
+        command: npm start
+        links:
+            - 'mysql' # permite conectarse a la BD desde Apache con el hostname "mysql"   
+
+    mysql: # base de datos MySQL con toda la información del servicio
+        build:
+            context: ./mysql # Dockerfile para configurar la BD (ya especifica la imagen) 
+        command: --default-authentication-plugin=mysql_native_password # importantísimo para poder aceder correctamente a la BD desde PHP y tener la codificación en UTF-8
+        volumes:
+            - mysql:/var/lib/mysql
+        environment:
+            TZ: "Europe/Madrid"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+            # Usuario, contraseña y nombre de la BD
+            MYSQL_ROOT_PASSWORD: "contraseña"
+            MYSQL_USER: 'taquillavirtual'
+            MYSQL_PASSWORD: 'tvsinf000'
+            MYSQL_DATABASE: 'TaquillaVirtual'
+
+volumes:
+    mysql:
