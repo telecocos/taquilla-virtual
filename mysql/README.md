@@ -5,10 +5,10 @@ La base de datos almacena la siguiente información:
 * <b>Clientes: </b>Realizan <b>Compras</b> de entradas para <b>Eventos</b>.
 
 ## Modelo Entidad-Asociación:
-<img src="doc/modelo-ea.jpg"/>
+<img src="/doc/modelo-ea.jpg"/>
 
 ## Modelo Lógico-Relacional:
-<img src="doc/modelo-relacional.jpg"/>
+<img src="/doc/modelo-relacional.png"/>
 
 ## Procedimientos almacenados (procedures):
 Toda la funcionalidad de la base de datos se implementa a través de una serie de procedimientos almacenados (stored procedures), definidos todos en `BDTaquillaVirtual.sql`:
