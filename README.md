@@ -14,17 +14,16 @@ La API REST permite interactuar con la base de datos mediante peticiones HTTP. S
 Ejecutar `$ docker-compose build` y después `$docker-compose up`. Una vez inicializados los contenedores, se puede acceder a la API en el puerto 2080.
 
 ## Mejoras pendientes:
-<ul>
-<li>Mecanismo de autenticación para las compras, altas de clientes y tareas administrativas
-<li>Guardar las credenciales de acceso a la BD de forma segura (ahora mismo están en texto plano en el código)
-<li>Conexión HTTPS con la API
-<li>Cliente en Angular o PHP
-</ul>
+
+* Mecanismo de autenticación para las compras, altas de clientes y tareas administrativas
+* Guardar las credenciales de acceso a la BD de forma segura (ahora mismo están en texto plano en el código)
+* Conexión HTTPS con la API
+* Cliente en Angular o PHP
+
 
 ## Autores:
-<ul>
-<li>Andrés Álvarez López: <a href="https://github.com/andresallo">@andresallo</a>
-<li>Diego Araújo Novoa: <a href="https://github.com/diegoara96">@diegoara96</a>
-<li>Guillermo Barreiro Fernández: <a href="https://github.com/gbarreiro">@gbarreiro</a>
-<li>Shaila Calvo Almeida: <a href="https://github.com/shaic98">@shaic98</a>
-</ul>
+
+* Andrés Álvarez López: <a href="https://github.com/andresallo">@andresallo</a>
+* Diego Araújo Novoa: <a href="https://github.com/diegoara96">@diegoara96</a>
+* Guillermo Barreiro Fernández: <a href="https://github.com/gbarreiro">@gbarreiro</a>
+* Shaila Calvo Almeida: <a href="https://github.com/shaic98">@shaic98</a>
